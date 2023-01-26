@@ -1,10 +1,35 @@
-window.addEventListener('load', function () {
+window.addEventListener("load", function() {
   const canvas = document.querySelector("#canvas");
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext("2d");
 
-  //The same size as windowscreen size
   canvas.height = window.innerHeight;
   canvas.width = window.innerWidth;
 
-  ctx.fillRect(50, 50, 300, 200)
+  //only draw when draw is true;
+  let draw = false;
+
+  //when mouse down, draw starts
+  canvas.addEventListener('mousedown', function() {
+    draw = true;
+  });
+
+  //when mouse is moving, then drawing
+  canvas.addEventListener('mousemove', function(e) {
+    //if draw is not true we won't draw
+    if(!draw) return;
+
+    ctx.lineWidth = 10;
+    ctx.lineCap = "round";
+
+    ctx.lineTo(e.clientX, e.clientY);
+    ctx.stroke();
+
+  })
+
+  //when mouse up, draw stop
+  canvas.addEventListener('mouseup', function() {
+    draw = false;
+  });
+
+
 })

@@ -3,11 +3,54 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/8282ce4e26.js"></script>
     <title>Drawing app</title>
   </head>
   <body>
+    <div class="container">
+        <section calss="toolbar">
+          <div class="row">
+            <label class="title">Options</label>
+            <ul class="options">
+              <li class="option">
+                <i class="fa fa-paint-brush" aria-hidden="true"></i>
+                <span>Brush</span>
+              </li>
+              <li class="option">
+                <i class="fa fa-eraser" aria-hidden="true"></i>
+                <span>Eraser</span>
+              </li>
+              <li class="option">
+                <input type="range" id="size-slider">
+              </li>
+            </ul>
+          </div>
 
-    <canvas id="canvas"></canvas>
+          <div class="row colors">
+            <label class="title">Colors</label>
+            <ul class="options">
+              <li class="option"></li>
+              <li class="option"></li>
+              <li class="option"></li>
+              <li class="option"></li>
+              <li class="option"></li>
+            </ul>
+          </div>
+
+          <div class="row clear">
+            <button type="button" class="clear-canvas">Clear Canvas</button>
+          </div>
+
+         </section>
+
+
+      <section class="canvas">
+        <canvas id="canvas"></canvas>
+      </section>
+
+      </div>
+
+
     <script src="app.js"> </script>
   </body>
 </html>

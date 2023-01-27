@@ -3,6 +3,99 @@
   margin: 0;
 }
 
-#canvas {
-  border: 2px solid black;
+body {
+display: flex;
+justify-content:center;
+align-items: center;
+min-height: 100vh;
+background-color: pink;
+}
+
+.container {
+display: flex;
+width: 100%;
+max-width: 1050px;
+gap: 10px;
+padding: 10px;
+
+}
+
+section {
+  background-color: #fff;
+  border-radius: 7px;
+}
+.row{
+  padding: 20px;
+}
+
+.title {
+  display: block;
+  margin-bottom: 20px;
+}
+
+
+li {
+  list-style: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.option:is(:hover, .active) {
+  color: blue;
+}
+
+#size-slider{
+    cursor: pointer;
+}
+
+.colors .options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.colors .option {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+
+}
+
+.colors .option:nth-child(1){
+  background-color: #000;
+}
+
+.colors .option:nth-child(2){
+  background-color: #E02020;
+}
+
+.colors .option:nth-child(3){
+  background-color: #6DD400;
+}
+
+.colors .option:nth-child(4){
+  background-color: #4A98F7;
+}
+
+.colors .option:nth-child(5){
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+}
+
+.clear-canvas {
+width: 100%;
+padding: 10px;
+cursor: pointer;
+}
+
+
+.canvas {
+  border: 1px solid yellow;
+  flex:1;
+}
+
+
+canvas {
+  width: 100%;
+  height: 100%;
 }

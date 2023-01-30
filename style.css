@@ -79,8 +79,7 @@ li {
 }
 
 .colorsList .color:nth-child(5){
-  background-color: #fff;
-  border: 1px solid #bfbfbf;
+  background-color: #FFC0CB;
 }
 
 .clear-canvas {

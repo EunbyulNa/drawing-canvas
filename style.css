@@ -4,26 +4,26 @@
 }
 
 body {
-display: flex;
-justify-content:center;
-align-items: center;
-min-height: 100vh;
-background-color: pink;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(189deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
 .container {
-display: flex;
-width: 100%;
-max-width: 1050px;
-gap: 10px;
-padding: 10px;
-
+  display: flex;
+  width: 100%;
+  max-width: 1050px;
+  gap: 10px;
+  padding: 10px;
 }
 
 section {
   background-color: #fff;
   border-radius: 7px;
 }
+
 .row{
   padding: 20px;
 }
@@ -32,7 +32,6 @@ section {
   display: block;
   margin-bottom: 20px;
 }
-
 
 li {
   list-style: none;
@@ -45,7 +44,11 @@ li {
 }
 
 #size-slider{
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.size p {
+  margin: 20px 0 15px 0;
 }
 
 .colors .colorsList {
@@ -56,9 +59,7 @@ li {
 .colorsList .color {
   width: 20px;
   height: 20px;
-  background-color: red;
   border-radius: 50%;
-
 }
 
 .colorsList .color:nth-child(1){
@@ -83,17 +84,14 @@ li {
 }
 
 .clear-canvas {
-width: 100%;
-padding: 10px;
-cursor: pointer;
+  width: 100%;
+ padding: 10px;
+ cursor: pointer;
 }
-
 
 .canvas {
-  border: 1px solid yellow;
   flex:1;
 }
-
 
 canvas {
   width: 100%;

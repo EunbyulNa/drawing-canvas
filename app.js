@@ -11,15 +11,18 @@ let selectTool = "brush";
 let brushWidth = 5;
 let selectedColor = "#000";
 
+//canvas size
 window.addEventListener("load", function () {
   canvas.width = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
 })
 
+//When change the sizeslide option
 sizeSlide.addEventListener("change", function() {
   brushWidth = sizeSlide.value;
 })
 
+//Brush or easer tool options
 options.forEach( (option) => {
   option.addEventListener("click", function () {
     selectTool = option.id;
@@ -34,16 +37,19 @@ options.forEach( (option) => {
   })
 })
 
+//color options
 colors.forEach( (color) => {
   color.addEventListener("click", function () {
    selectedColor = window.getComputedStyle(color).getPropertyValue("background-color")
   })
 })
 
+//clear canvas
 clearCanvas.addEventListener("click", function () {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 })
 
+//Draw start
 canvas.addEventListener("mousedown", function(e) {
   isDrawing = true;
   ctx.beginPath();
@@ -52,6 +58,7 @@ canvas.addEventListener("mousedown", function(e) {
   ctx.strokeStyle = selectedColor;
 });
 
+//Drawing
 canvas.addEventListener("mousemove", function (e) {
   if(!isDrawing) return;
 
@@ -65,7 +72,7 @@ canvas.addEventListener("mousemove", function (e) {
   }
 })
 
+//Draw finish 
 canvas.addEventListener("mouseup", function () {
   isDrawing = false;
-
 })
